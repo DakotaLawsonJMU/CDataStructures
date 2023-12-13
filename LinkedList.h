@@ -1,8 +1,13 @@
 #include <stdlib.h>
 
+typedef struct node {
+  int data;
+  struct node *next;
+} node_t;
+
 typedef struct linkedList {
     size_t size;
-    void ** data;
+    node_t head;
 } linkedList_t;
 
 struct linkedList_t *linkedList_create();
